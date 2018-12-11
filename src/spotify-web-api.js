@@ -531,10 +531,10 @@ SpotifyWebApi.prototype = {
         actualOptions[key] = options[key];
       });
     }
-    console.log("Calling:" +'/v1/user/' + encodeURIComponent(userId) + '/playlists');
+    console.log("Calling:" +'/v1/users/' + encodeURIComponent(userId) + '/playlists');
     console.log("With:" +actualOptions);
     return WebApiRequest.builder(this.getAccessToken())
-      .withPath('/v1/user/' + encodeURIComponent(userId) + '/playlists')
+      .withPath('/v1/users/' + encodeURIComponent(userId) + '/playlists')
       .withHeaders({ 'Content-Type': 'application/json' })
       .withBodyParameters(actualOptions)
       .build()
