@@ -533,7 +533,7 @@ SpotifyWebApi.prototype = {
     }
 
     return WebApiRequest.builder(this.getAccessToken())
-      .withPath('/v1/users/' + encodeURIComponent(userId) + '/playlists')
+      .withPath('/v1/user/' + encodeURIComponent(userId) + '/playlists')
       .withHeaders({ 'Content-Type': 'application/json' })
       .withBodyParameters(actualOptions)
       .build()
